@@ -6,12 +6,14 @@ public interface Menu {
 
     void addTaskToList(String listTitle, String taskMessage);
 
-    void deleteTask(int taskNumber);
+    void deleteTask(String listTitle, int taskNumber);
 
-    void markTask(int taskNumber);
+    void markTask(String listTitle, int taskNumber);
 
     void showLists();
 
     void showTasks(String listTitle);
+
+    void showOnlyNotCompletedTasks(String listTitle);
 
 }

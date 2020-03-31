@@ -6,15 +6,23 @@ public class TasksList {
     private ArrayList<Task> tasks;
     private String title;
 
+    public String getTitle() {
+        return title;
+    }
+
     public TasksList(String title) {
         this.tasks = new ArrayList<>();
         this.title = title;
     }
 
-    public void addTask(String taskMessage) {
+    public void addTask(String taskMessage, Boolean completed) {
 
         tasks.add(new Task(taskMessage));
         //запись в json
+    }
+
+    public void addTask(Task task){
+        tasks.add(task);
     }
 
     public void deleteTask(int index) {
