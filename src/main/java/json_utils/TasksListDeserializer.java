@@ -11,7 +11,7 @@ public class TasksListDeserializer implements JsonDeserializer<TasksList> {
     @Override
     public TasksList deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
         JsonObject jsonObject = json.getAsJsonObject();
-        TasksList result = new TasksList(jsonObject.get("title").getAsString());
+        TasksList result = new TasksList();
 
         for(JsonElement element : jsonObject.getAsJsonArray("tasks")){
             Task task = context.deserialize(element, Task.class);

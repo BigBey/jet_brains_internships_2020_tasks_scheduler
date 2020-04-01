@@ -2,7 +2,9 @@ package json_utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import entities.Task;
 import entities.TasksList;
+import menu.MenuImplementation;
 
 import java.io.*;
 import java.util.HashMap;
@@ -25,17 +27,19 @@ public class JsonUtils {
         }
     }
 
-    /*public static HashMap<String , TasksList> readFromJson(){
+    public static HashMap<String , TasksList> readFromJson(){
         HashMap<String , TasksList> result = new HashMap<>();
         Gson gson = new GsonBuilder()
-                .setPrettyPrinting()
+                .registerTypeAdapter(HashMap.class, new MenuDeserializer())
+                .registerTypeAdapter(TasksList.class, new TasksListDeserializer())
+                .registerTypeAdapter(Task.class, new TaskDeserializer())
                 .create();
         try {
             Reader reader = new FileReader(JSON_PATH);
-            //result = gson.fromJson(reader, result);
+            result = gson.fromJson(reader, HashMap.class);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        return result;
     }
-     */
 }

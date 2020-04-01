@@ -4,10 +4,19 @@ import java.util.ArrayList;
 
 public class TasksList {
     private ArrayList<Task> tasks;
-    private String title;
+    private transient String title;
 
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public TasksList() {
+        this.tasks = new ArrayList<>();
+        this.title = "untitled";
     }
 
     public TasksList(String title) {
@@ -15,7 +24,7 @@ public class TasksList {
         this.title = title;
     }
 
-    public void addTask(String taskMessage, Boolean completed) {
+    public void addTask(String taskMessage) {
 
         tasks.add(new Task(taskMessage));
         //запись в json
