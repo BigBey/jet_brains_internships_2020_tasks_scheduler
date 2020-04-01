@@ -25,9 +25,7 @@ public class TasksList {
     }
 
     public void addTask(String taskMessage) {
-
         tasks.add(new Task(taskMessage));
-        //запись в json
     }
 
     public void addTask(Task task){
@@ -35,9 +33,7 @@ public class TasksList {
     }
 
     public void deleteTask(int index) {
-
         tasks.remove(index);
-        //удаление из json
     }
 
     public void markTask(int index) {

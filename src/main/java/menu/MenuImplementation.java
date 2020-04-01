@@ -14,6 +14,9 @@ public class MenuImplementation implements Menu {
     @Override
     public void createList(String listTitle) {
         lists = JsonUtils.readFromJson();
+        if(lists == null){
+            lists = new HashMap<>();
+        }
         lists.put(listTitle, new TasksList(listTitle));
         JsonUtils.writeToJson(lists);
     }
@@ -27,16 +30,21 @@ public class MenuImplementation implements Menu {
 
     @Override
     public void deleteTask(String listTitle, int taskNumber) {
+        lists = JsonUtils.readFromJson();
         lists.get(listTitle).deleteTask(taskNumber);
+        JsonUtils.writeToJson(lists);
     }
 
     @Override
     public void markTask(String listTitle, int taskNumber) {
+        lists = JsonUtils.readFromJson();
         lists.get(listTitle).markTask(taskNumber);
+        JsonUtils.writeToJson(lists);
     }
 
     @Override
     public void showLists() {
+        lists = JsonUtils.readFromJson();
         for(Map.Entry<String, TasksList> list : lists.entrySet()){
             System.out.println(list.getValue().getTitle());
         }
@@ -44,15 +52,13 @@ public class MenuImplementation implements Menu {
 
     @Override
     public void showTasks(String listTitle) {
+        lists = JsonUtils.readFromJson();
         lists.get(listTitle).showTasks();
     }
 
     @Override
     public void showOnlyNotCompletedTasks(String listTitle) {
+        lists = JsonUtils.readFromJson();
         lists.get(listTitle).showOnlyNotCompletedTasks();
-    }
-
-    public void addList(TasksList tasksList){
-        lists.put(tasksList.getTitle(), tasksList);
     }
 }
