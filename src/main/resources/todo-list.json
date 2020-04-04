@@ -18,5 +18,25 @@
         "completed": false
       }
     ]
+  },
+  "help": {
+    "tasks": []
+  },
+  "List1": {
+    "tasks": []
+  },
+  "List2": {
+    "tasks": []
+  },
+  "List3": {
+    "tasks": []
+  },
+  "List4": {
+    "tasks": [
+      {
+        "message": "Закомитить и запушить изменения",
+        "completed": false
+      }
+    ]
   }
 }
