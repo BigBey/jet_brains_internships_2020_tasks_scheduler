@@ -1,0 +1,42 @@
+{
+  "list1": {
+    "tasks": [
+      {
+        "message": "task1",
+        "completed": false
+      },
+      {
+        "message": "task2",
+        "completed": true
+      },
+      {
+        "message": "task3",
+        "completed": false
+      },
+      {
+        "message": "task4",
+        "completed": false
+      }
+    ]
+  },
+  "help": {
+    "tasks": []
+  },
+  "List1": {
+    "tasks": []
+  },
+  "List2": {
+    "tasks": []
+  },
+  "List3": {
+    "tasks": []
+  },
+  "List4": {
+    "tasks": [
+      {
+        "message": "Закомитить и запушить изменения",
+        "completed": false
+      }
+    ]
+  }
+}
