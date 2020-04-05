@@ -30,5 +30,14 @@
     
 6. Пример использования:
 
+![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/help.PNG)
+
 ![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/CreateList.PNG)
 
+![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/ShowLists.PNG)
+
+![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/AddTaskToList.PNG)
+
+![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/MarkTask.PNG)
+
+![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/ShowTasks.PNG)
