@@ -23,7 +23,9 @@ public class AddTaskToList implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         MenuImplementation menu = new MenuImplementation();
+        menu.readFromJson();
         menu.addTaskToList(listTitle, taskText);
+        menu.writeToJson();
         return 0;
     }
 }

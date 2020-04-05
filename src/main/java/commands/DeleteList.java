@@ -6,22 +6,23 @@ import picocli.CommandLine.*;
 
 import java.util.concurrent.Callable;
 
-@Command(description = "Creates new empty list of tasks.", name = "createlist",
-        mixinStandardHelpOptions = true, version = "1.0")
-public class CreateList implements Callable<Integer> {
+@Command(description = "Deletes existing list from file.", name = "DeleteList",
+mixinStandardHelpOptions = true, version = "1.0")
+public class DeleteList implements Callable<Integer> {
 
     @Parameters(index = "0", description = "The title of list.")
-    private String title;
+    private String listTitle;
 
-    public static void main(String[] args) throws Exception{
-        int exitCode = new CommandLine(new CreateList()).execute(args);
+    public static void main(String[] args) {
+        int exitCode = new CommandLine(new DeleteList()).execute(args);
         System.exit(exitCode);
     }
+
     @Override
     public Integer call() throws Exception {
         MenuImplementation menu = new MenuImplementation();
         menu.readFromJson();
-        menu.createList(title);
+        menu.deleteList(listTitle);
         menu.writeToJson();
         return 0;
     }

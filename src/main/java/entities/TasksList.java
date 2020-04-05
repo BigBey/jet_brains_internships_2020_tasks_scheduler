@@ -32,18 +32,28 @@ public class TasksList {
         tasks.add(task);
     }
 
-    public void deleteTask(int index) {
-        tasks.remove(index);
+    public int deleteTask(int index) {
+        if(index < tasks.size()) {
+            tasks.remove(index);
+            return 1;
+        }else{
+            System.out.println("Index is more than list's size.");
+            return 0;
+        }
     }
 
-    public void markTask(int index) {
-
-        Task task = tasks.get(index);
-
-        if (task.getCompleted()) {
-            tasks.get(index).setCompleted(false);
-        } else {
-            tasks.get(index).setCompleted(true);
+    public int markTask(int index) {
+        if(index < tasks.size()) {
+            Task task = tasks.get(index);
+            if (task.getCompleted()) {
+                tasks.get(index).setCompleted(false);
+            } else {
+                tasks.get(index).setCompleted(true);
+            }
+            return 1;
+        }else{
+            System.out.println("Index is more than list's size.");
+            return 0;
         }
     }
 

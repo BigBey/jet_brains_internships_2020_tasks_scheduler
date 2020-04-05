@@ -2,18 +2,20 @@ package menu;
 
 public interface Menu {
 
-    void createList(String listTitle);
+    int createList(String listTitle);
 
-    void addTaskToList(String listTitle, String taskMessage);
+    int deleteList(String listTitle);
 
-    void deleteTask(String listTitle, int taskNumber);
+    int addTaskToList(String listTitle, String taskMessage);
 
-    void markTask(String listTitle, int taskNumber);
+    int deleteTask(String listTitle, int taskNumber);
 
-    void showLists();
+    int markTask(String listTitle, int taskNumber);
 
-    void showTasks(String listTitle);
+    int showLists();
 
-    void showOnlyNotCompletedTasks(String listTitle);
+    int showTasks(String listTitle);
+
+    int showOnlyNotCompletedTasks(String listTitle);
 
 }
