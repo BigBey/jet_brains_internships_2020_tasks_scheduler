@@ -30,5 +30,5 @@
     
 6. Пример использования:
 
-
+![Image alt](https://github.com/BigBey)
 
