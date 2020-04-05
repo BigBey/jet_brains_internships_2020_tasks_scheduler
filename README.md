@@ -30,14 +30,26 @@
     
 6. Пример использования:
 
+вызов команды с аргументом -h:
+
 ![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/help.PNG)
+
+Создание нового списка с именем "New list":
 
 ![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/CreateList.PNG)
 
+Показ всех списков:
+
 ![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/ShowLists.PNG)
+
+Добавление нового задания в список:
 
 ![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/AddTaskToList.PNG)
 
+Отмечаем дело как выполненное(чтобы убрать * достаточно выполнить ту же самую команду):
+
 ![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/MarkTask.PNG)
+
+Выводим все задания списка "New list":
 
 ![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/ShowTasks.PNG)
