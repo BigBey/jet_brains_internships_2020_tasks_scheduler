@@ -30,5 +30,5 @@
     
 6. Пример использования:
 
-![Image alt](https://github.com/BigBey)
+![Image alt](https://github.com/BigBey/jet_brains_internships_2020_tasks_scheduler/blob/develop/raw/CreateList.PNG)
 
